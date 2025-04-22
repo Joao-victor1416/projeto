@@ -1,0 +1,49 @@
+
+#body-index {
+    background: linear-gradient(-45deg, #e73c7e 10%,#e22222, #e4552a, #ddc123);
+    animation: colors 15s ease-in infinite normal;
+    background-size: 400% 400%;
+}
+#form{
+backdrop-filter: blur(30px);
+box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+#modal-content {
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+
+}
+.modal-right {
+    position: fixed;
+    right: -35vw;
+    top: 5vh;
+    bottom: 0;
+
+}
+
+.imgs {
+transition: transform .4s ease, opacity .4s ease-in-out;
+}
+
+.imgs:hover , .imgs:focus{
+    transform: scale(.8);
+    opacity: 70%;
+}
+.dark-bg {
+    background-color: #252525;
+}
+
+@keyframes colors {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

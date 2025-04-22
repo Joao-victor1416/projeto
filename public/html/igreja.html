@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUD</title>
+</head>
+
+<body style="font-family: Roboto, Montserrat; background-color: #252525;">
+  <header class="container-fluid" style="margin-bottom: 6vh;">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand ms-2 text-danger" tabindex="1" href="#">Jesus</a>
+          <button class="border-0 navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
+          
+          <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" tabindex="-1">
+            
+            <div class="offcanvas-header">
+
+              <a id="example2" tabindex="6" class="rounded-5 btn btn-dark m-0 p-0" role="button"
+              data-bs-toggle="popover"
+              data-bs-title="Popover com Ícone">
+              <i class="bi bi-person-circle fs-2 m-0 p-0"></i> <!-- Ícone como imagem -->
+            </a>
+
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
+
+                <li class="rounded-1 fs-5 nav-item" tabindex="2">
+                  <a class="nav-link active text-danger" aria-current="page" href="#">Inicio</a>
+                </li>
+                
+                <li class="rounded-1 fs-5 nav-item" tabindex="3">
+                  <a class="nav-link active text-danger" aria-current="page" href="#">Eventos</a>
+                </li>
+                
+                <li class="rounded-1 fs-5 nav-item" tabindex="4">
+                  <a class="nav-link active text-danger" aria-current="page" href="#">Sobre</a>
+                </li>
+                
+                <li class="rounded-1 fs-5 nav-item" tabindex="5">
+                  <a class="nav-link active text-danger" href="#" aria-current="page">Doação</a>
+                </li>
+                
+                <a id="example" tabindex="6" class="rounded-5 btn btn-dark m-0 p-0" role="button"
+                data-bs-toggle="popover"
+                data-bs-title="Popover com Ícone">
+                <i class="bi bi-person-circle fs-2 m-0 p-0"></i> <!-- Ícone como imagem -->
+              </a>
+
+              </ul>
+            </div>  
+            
+          </div>
+        </nav>
+
+  </header>
+
+  <main>
+    <article id="carouselExampleRide" style="z-index: 4;" class="bg-transparent container-fluid carousel slide" data-bs-ride="true" >
+
+        <div class="carousel-inner" style="z-index: 4;">
+          <div class="carousel-item active mt-5" data-bs-interval="1000">
+            <img src="../assets/img.svg" class="svg-stretch m-0 p-0 d-block w-100" alt="..." style="height: 35vh;">
+          </div>
+          <div class="carousel-item active mt-5" data-bs-interval="1000">
+            <img src="../assets/img.svg" class="svg-stretch m-0 p-0 d-block w-100" alt="..." style="height: 35vh;">
+          </div>
+          <div class="carousel-item active mt-5" data-bs-interval="1000">
+            <img src="../assets/img.svg" class="svg-stretch m-0 p-0 d-block w-100" alt="..." style="height: 35vh;">
+          </div>
+        </div>
+
+        <button style="z-index: 6;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button style="z-index: 6;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+    </article>
+
+    <section class=" container-fluid bg-transparent text-danger">
+      <div class="row justify-content-center">
+        
+        <div class="col-10 col-sm-7 col-md-6 col-lg-4 my-3 mb-sm-1">
+          <div class="imgs card bg-transparent text-dark" tabindex="7">
+            <img  src="../assets/img.svg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+            </div>
+          </div>
+          </div>
+            
+        <div  class="col-10 col-sm-7 col-md-6 col-lg-4 my-3 mb-sm-1">
+          <div class="imgs card bg-transparent text-white" tabindex="8">
+            <img src="../assets/img.svg" class="card-img" alt="...">
+          </div>
+
+        </div>
+
+        <div  class="col-10 col-sm-7 col-md-6 col-lg-4 my-3 mb-sm-1">
+          <div class="imgs card bg-transparent text-white" tabindex="9">
+            <img src="../assets/img.svg" class="card-img" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <div class="background-animate">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <footer class="bg-transparent container-fluid">
+
+    <a class=" text-secondary" href="" tabindex="10">
+      <i class="bg-white fs-2 bi bi-instagram px-2 py-1 m-1" style="border-radius: 50px;"></i>
+    </a>
+
+    <a class="text-secondary" href="" tabindex="11">
+      <i class="bg-white fs-2 bi bi-whatsapp px-2 py-1 m-1" style="border-radius: 50px;"></i>
+    </a>
+
+    <a class="text-secondary" href="" tabindex="12">
+      <i class="bg-white fs-2 bi bi-facebook px-2 py-1 m-1" style="border-radius: 50px;"></i>
+    </a>
+
+    <a class="text-secondary" href="" tabindex="13">
+      <i class="bg-white fs-2 bi bi-twitter px-2 py-1 m-1" style="border-radius: 50px;"></i>
+    </a>
+
+  </footer>
+</body>
+</html>

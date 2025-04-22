@@ -1,0 +1,12 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap-icons/font/bootstrap-icons.min.css';
+
+@import './offcanva.scss';
+@import './animations.scss';
+@import './popover.scss';
+$modal-fade-transform: scale(.8);
+/* Remover o fundo escuro padrão do Bootstrap para o modal */

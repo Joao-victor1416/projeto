@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUD</title>
+</head>
+<body id="body-index" style="overflow-y: hidden;">
+
+    <div class="container-fluid">
+        <main class="row">
+            <div class="d-flex align-items-center justify-content-center col-12 text-white" style="height: 80vh;">
+                <form id="form" method="post" action="" class=" col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 col-xxl-8 bg-transparent rounded-2 p-3">
+                
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="EmailLogin" name="Email" placeholder="Email">
+                        <p class="d-none invalid-feedback text-white fw-normal" id="pEmailLogin"></p>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="SenhaLogin" name="Senha" placeholder="Senha">
+                        <p class="d-none invalid-feedback text-white fw-normal" id="pSenhaLogin"></p>
+                    </div>
+
+                    <div class="d-flex justify-content-between">    
+                        <button id="btnLogin" type="submit" class="btn btn-primary disabled">Enviar</button>
+                        <a class="text-decoration-none text-white me-3" id="aRegistro" data-bs-toggle="modal" data-bs-target="#modal">registre-se</a>
+                    </div>
+                </form>
+
+            </div>
+        </main>
+        <!-- </div> -->
+
+        <!-- <div class="container-fluid"> -->
+        <footer class="row">
+            <div class=" col-12 text-white" style="height: 20vh;">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<!-- ========================================================================== -->
+<form method="post" action="" class="col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 col-xxl-8 border-2 rounded-2 p-3 modal fade"
+ id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+ <div class="modal-dialog">
+ <div class="modal-content bg-transparent text-white" id="modal-content">
+
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Preencha com suas informações os campos abaixo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div><!-- HEADER -->
+
+      <div class="modal-body">
+
+    <div class="mb-3">
+        <input type="text" class="form-control" id="Nome" name="nome" placeholder="Nome">
+        <p class="d-none invalid-feedback text-white fw-normal" id="pNome"></p>
+    </div>
+  
+    <div class="mb-3">
+        <input type="text" class="form-control" id="Sobrenome" name="sobrenome" placeholder="Sobrenome">
+        <p class="d-none invalid-feedback text-white fw-normal" id="pSobrenome"></p>
+    </div>
+  
+    <div class="mb-3">
+        <input type="email" class="form-control" id="Email" name="email" placeholder="Email">
+        <p class="d-none invalid-feedback text-white fw-normal" id="pEmail"></p>
+    </div>
+    
+    <div class="mb-3">
+        <input type="password" class="form-control" id="Senha" name="senha" placeholder="Senha">
+        <p class="d-none invalid-feedback text-white fw-normal" id="pSenha"></p>
+    </div>
+    
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="termos" id="Checkbox">
+        <label class="form-check-label" for="">Aceito os Termos de uso</label>
+        <p class="d-none invalid-feedback text-white fw-normal" id="pCheckbox"></p>
+    </div>
+</div><!-- BODY -->
+
+<div class=" modal-footer">
+    <button type="button" class=" w-90 btn border-1 border-white text-white" data-bs-dismiss="modal">Fechar</button>
+    <button type="submit" class=" w-90 btn border-1 border-white text-white" id="btn">Enviar</button>
+  </div> <!-- FOOTER -->
+
+    </div> <!-- CONTENT -->
+</div><!-- DIALOG -->
+  </form>
