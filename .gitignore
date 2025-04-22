@@ -1,0 +1,6 @@
+.env
+build/
+prototipo/
+teste1/
+teste2/
+node_modules/
