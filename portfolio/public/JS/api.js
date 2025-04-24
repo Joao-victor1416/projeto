@@ -199,7 +199,9 @@ function validarForm() {
     submit.classList.add("disabled");
   }
 }
-
+const modal = document.getElementById('modal');
+if (modal && document.contains(modal)) {
+  // Adicionando o evento de submit ao formulário de cadastro
 document.getElementById("modal").addEventListener("submit", async (event) => {
   event.preventDefault(); // Previne o comportamento padrão do formulário
 
@@ -249,7 +251,7 @@ document.getElementById("modal").addEventListener("submit", async (event) => {
     }
   }
 });
-
+}
 // Função de validação para o formulário de login
 function validarFormLogin() {
   const isEmailValid = InputEmailLogin.classList.contains("is-valid");
@@ -266,6 +268,8 @@ function validarFormLogin() {
     submitLogin.classList.add("disabled");
   }
 }
+const form = document.getElementById('form');
+if (form && document.contains(form)) {
 document
   .getElementById("form")
   .addEventListener("submit", async (event) => {
@@ -296,7 +300,8 @@ document
       alert("Erro ao fazer login.");
     }
   });
-
+}
+if (submit && document.contains(submit)) {
 document.addEventListener("DOMContentLoaded", () => {
   submit.disabled = true;
   submitLogin.disabled = true;
@@ -325,5 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .addEventListener("click", showLoginForm);
   document.querySelector("body").addEventListener("input", showLoginForm);
 });
+}
 
 // ===========================

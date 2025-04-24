@@ -40,9 +40,10 @@ popover(example,popoverContent)
 // =============================================
 
 const bootstrap = require("bootstrap");
-const example = document.getElementById('example');
-const example2 = document.getElementById('example2');
+const popover = document.getElementById('popover');
+const popover2 = document.getElementById('popover2');
 
+if(document.contains(popover && popover2)){
 const popoverContent = `
   <div>
     <strong>Conteúdo do Popover</strong>
@@ -50,17 +51,20 @@ const popoverContent = `
     <a class="nav-link active text-danger" href="#" aria-current="page">Conta</a>
   </div>
 `;
+let popoverInstance = null;
 
 function initPopover(element, content) {
+  if (popoverInstance) {
+    popoverInstance.dispose(); // Destrói a instância anterior se existir
+  }
   // Inicializando o popover
-  const popoverInstance = new bootstrap.Popover(element, {
+  popoverInstance = new bootstrap.Popover(element, {
     content: content,
     html: true,
     title: 'Popover com Ícone',
     trigger: 'click',
     placement: 'bottom'
   });
-
   // Função para fechar o popover ao clicar fora
   document.addEventListener('click', (event) => {
     const isClickInside = element.contains(event.target);
@@ -71,19 +75,26 @@ function initPopover(element, content) {
 }
 
 function checkScreenWidth() {
+  if (popoverInstance) {
+    popoverInstance.dispose(); // <- adiciona isso pra sempre limpar o anterior
+    popoverInstance = null;
+  }
   if (window.innerWidth <= 992) {
-    example.style.display = "none";
-    example2.style.display = "block";
-    initPopover(example2, popoverContent);
+    popover.style.display = "none";
+    popover2.style.display = "block";
+    initPopover(popover2, popoverContent);
   } else {
-    example2.style.display = "none";
-    example.style.display = "block";
-    initPopover(example, popoverContent);
+    popover2.style.display = "none";
+    popover.style.display = "block";
+    initPopover(popover, popoverContent);
   }
 }
 
-// Chamada inicial para verificar o tamanho da tela
-checkScreenWidth();
 
-// Monitora o redimensionamento da janela
-window.addEventListener('resize', checkScreenWidth);
+document.addEventListener('DOMContentLoaded', () => {
+  // Chamada inicial para verificar o tamanho da tela
+  checkScreenWidth();
+  // Monitora o redimensionamento da janela
+  window.addEventListener('resize', checkScreenWidth);
+})
+}

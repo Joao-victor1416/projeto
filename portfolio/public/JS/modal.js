@@ -1,6 +1,9 @@
 const bootstrap = require("bootstrap")
+const btnLogin = document.getElementById("btnLogin");
+
+if(document.contains(btnLogin)){
+
 document.addEventListener("DOMContentLoaded", () => {
-    const btnLogin = document.getElementById("btnLogin");
     
     // Função para abrir o modal
     function abrirModal() {
@@ -11,3 +14,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Configura o evento de clique no botão de login
     btnLogin.addEventListener('click', abrirModal);
 });
+}
