@@ -243,7 +243,6 @@ document.getElementById("modal").addEventListener("submit", async (event) => {
       if (response.data.success && response.data.termos === true) {
         const token = response.data.token;
         localStorage.setItem("token", token); // 🔐 Salva o token
-        console.log("Redirecionando para:", response.data.redirectUrl);
         window.location.href = response.data.redirectUrl; // Redirecionamento após sucesso
       }
     } catch (error) {
@@ -292,8 +291,6 @@ document
       if (response.data.success && response.data.termos === true) {
         const token = response.data.token;
         localStorage.setItem("token", token); // 🔐 Salva o token
-        console.log("redirecionando para :{0}", response.data.redirectUrl);
-        alert("login.");
         window.location.href = response.data.redirectUrl;
       }
     } catch (error) {

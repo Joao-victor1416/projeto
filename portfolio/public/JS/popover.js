@@ -1,3 +1,79 @@
+const jwt_decode = require('jwt-decode').jwtDecode;
+const bootstrap = require("bootstrap");
+const popover = document.getElementById('popover');
+const popover2 = document.getElementById('popover2');
+
+if(document.contains(popover && popover2)){
+const popoverContent = `
+  <div>
+    <strong>Conteúdo do Popover</strong>
+    <p>Texto adicional aqui.</p>
+    <a class="nav-link active text-danger" href="#" aria-current="page">Conta</a>
+  </div>
+`;
+let popoverInstance = null;
+
+function initPopover(element, content) {
+  if (popoverInstance) {
+    popoverInstance.dispose(); // Destrói a instância anterior se existir
+  }
+
+  // Inicializando o popover
+  const token = localStorage.getItem("token");
+  let nomePopover = "MUD"; // Valor padrão caso o token não exista
+
+  // Verifica se o token existe antes de decodificá-lo
+  if (token) {
+    try {
+      const decoded = jwt_decode(token);
+      nomePopover = decoded.nome || nomePopover; // pega o nome ou mantém o padrão
+    } catch (error) {
+      console.error("Erro ao decodificar token:", error);
+    }
+  }
+    popoverInstance = new bootstrap.Popover(element, {
+      
+    content: content,
+    html: true,
+    title: `<div class="text-center">${nomePopover}</div>`,
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  // Função para fechar o popover ao clicar fora
+  document.addEventListener('click', (event) => {
+    const isClickInside = element.contains(event.target);
+    if (!isClickInside && popoverInstance._isShown) {
+      popoverInstance.hide(); // Esconde o popover se clicar fora
+    }
+  });
+}
+
+function checkScreenWidth() {
+  if (popoverInstance) {
+    popoverInstance.dispose(); // <- adiciona isso pra sempre limpar o anterior
+    popoverInstance = null;
+  }
+  if (window.innerWidth <= 992) {
+    popover.style.display = "none";
+    popover2.style.display = "block";
+    initPopover(popover2, popoverContent);
+  } else {
+    popover2.style.display = "none";
+    popover.style.display = "block";
+    initPopover(popover, popoverContent);
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Chamada inicial para verificar o tamanho da tela
+  checkScreenWidth();
+  // Monitora o redimensionamento da janela
+  window.addEventListener('resize', checkScreenWidth);
+})
+}
+
 /*
 const popoverContent = `
     <div>
@@ -37,64 +113,4 @@ popover(example,popoverContent)
   
 }*/
 
-// =============================================
-
-const bootstrap = require("bootstrap");
-const popover = document.getElementById('popover');
-const popover2 = document.getElementById('popover2');
-
-if(document.contains(popover && popover2)){
-const popoverContent = `
-  <div>
-    <strong>Conteúdo do Popover</strong>
-    <p>Texto adicional aqui.</p>
-    <a class="nav-link active text-danger" href="#" aria-current="page">Conta</a>
-  </div>
-`;
-let popoverInstance = null;
-
-function initPopover(element, content) {
-  if (popoverInstance) {
-    popoverInstance.dispose(); // Destrói a instância anterior se existir
-  }
-  // Inicializando o popover
-  popoverInstance = new bootstrap.Popover(element, {
-    content: content,
-    html: true,
-    title: 'Popover com Ícone',
-    trigger: 'click',
-    placement: 'bottom'
-  });
-  // Função para fechar o popover ao clicar fora
-  document.addEventListener('click', (event) => {
-    const isClickInside = element.contains(event.target);
-    if (!isClickInside && popoverInstance._isShown) {
-      popoverInstance.hide(); // Esconde o popover se clicar fora
-    }
-  });
-}
-
-function checkScreenWidth() {
-  if (popoverInstance) {
-    popoverInstance.dispose(); // <- adiciona isso pra sempre limpar o anterior
-    popoverInstance = null;
-  }
-  if (window.innerWidth <= 992) {
-    popover.style.display = "none";
-    popover2.style.display = "block";
-    initPopover(popover2, popoverContent);
-  } else {
-    popover2.style.display = "none";
-    popover.style.display = "block";
-    initPopover(popover, popoverContent);
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Chamada inicial para verificar o tamanho da tela
-  checkScreenWidth();
-  // Monitora o redimensionamento da janela
-  window.addEventListener('resize', checkScreenWidth);
-})
-}
+// =========================================
