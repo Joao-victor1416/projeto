@@ -45,7 +45,7 @@ app.post('/cadastro', async (req, res) => {
             redirectUrl: 'http://localhost:9000/public/pages/igreja.html'
         });
     } catch (error) {
-        console.error(`Erro ao tentar cadastrar o usuário: ${error}`);
+        console.error(`erro ao tentar cadastrar o usuário: ${error}`);
         res.status(500).json({ error: "Erro ao tentar cadastrar o usuário." });
     }
 }
