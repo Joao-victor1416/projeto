@@ -30,7 +30,7 @@ app.post('/cadastro', async (req, res) => {
         // Cria um novo usuário usando a função do CRUD
         const novoUsuario = await crud.criarUsuario(nome, sobrenome, email, senhaCriptografada, termos);
 
-        console.log("Usuário cadastrado com sucesso:", novoUsuario);
+        console.log("usuário cadastrado com sucesso:", novoUsuario);
 
          const token = JWT.sign(
             { id: novoUsuario.guid, nome: novoUsuario.nome, sobrenome: novoUsuario.sobrenome, email: novoUsuario.email ,termos: novoUsuario.termos },
