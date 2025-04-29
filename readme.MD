@@ -7,6 +7,17 @@ DB_HOST=
 DB_PASSWORD=
 DB_PORT=
 
+criar tabela com a seguinte estrutura:
+CREATE TABLE usuarios (
+    guid UUID NOT NULL DEFAULT gen_random_uuid(),
+    nome VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    senha VARCHAR(100) NOT NULL,
+    termos BOOLEAN NOT NULL,
+    CONSTRAINT pk_usuarios_id PRIMARY KEY (guid)
+);
+
 feat: Adição de uma nova funcionalidade.
 Exemplo: feat: adiciona funcionalidade de login
 fix: Correção de um bug.
