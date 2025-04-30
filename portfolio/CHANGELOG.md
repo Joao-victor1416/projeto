@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/Joao-victor1416/projeto/compare/v1.3.1...v1.3.2) (2025-04-30)
+
+
+### Bug Fixes
+
+* corrige a geração do token de autenticação para usar o campo 'id' em vez de 'guid' ([2a8f4d6](https://github.com/Joao-victor1416/projeto/commit/2a8f4d6faa3377b7ffb85073d210ba9ca008b5a4))
+
 ### [1.3.1](https://github.com/Joao-victor1416/projeto/compare/v1.3.0...v1.3.1) (2025-04-29)
 
 
