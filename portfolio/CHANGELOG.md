@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.2](https://github.com/Joao-victor1416/projeto/compare/v1.3.1...v1.3.2) (2025-04-30)
 ### Docs
-* docs: atualiza instruções para criação das tabelas no README
+* docs: atualiza instruções para criação das tabelas no README ([2a8f4d6](https://github.com/Joao-victor1416/projeto/commit/2a8f4d6faa3377b7ffb85073d210ba9ca008b5a4))
 
 ### Bug Fixes
 
