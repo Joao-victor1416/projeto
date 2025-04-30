@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 ### Features
-docs: adiciona instruções para criação da tabela de usuários no README
+docs: adiciona instruções para criação da tabela de usuários no README([549dd30](https://github.com/Joao-victor1416/projeto/commit/549dd30820181e27b40b605cb969bdf2c38848bb))
 
 ## [1.3.0](https://github.com/Joao-victor1416/projeto/compare/v1.2.0...v1.3.0) (2025-04-29)
 
