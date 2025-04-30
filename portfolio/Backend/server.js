@@ -33,7 +33,7 @@ app.post('/cadastro', async (req, res) => {
         console.log("usuário cadastrado com sucesso:", novoUsuario);
 
          const token = JWT.sign(
-            { id: novoUsuario.guid, nome: novoUsuario.nome, sobrenome: novoUsuario.sobrenome, email: novoUsuario.email ,termos: novoUsuario.termos },
+            { id: novoUsuario.id, nome: novoUsuario.nome, sobrenome: novoUsuario.sobrenome, email: novoUsuario.email ,termos: novoUsuario.termos },
             process.env.JWT_SECRET,
             { expiresIn: '15d' }
         );
@@ -68,7 +68,7 @@ app.post('/login', async (req, res) => {
             return res.status(400).json({ error: "Senha incorreta." });
         }
           const token = JWT.sign(
-            { id: usuario.guid, nome: usuario.nome, sobrenome: usuario.sobrenome, email: usuario.email ,termos: usuario.termos },
+            { id: usuario.id, nome: usuario.nome, sobrenome: usuario.sobrenome, email: usuario.email ,termos: usuario.termos },
             process.env.JWT_SECRET,
             { expiresIn: '15d' }
         );
