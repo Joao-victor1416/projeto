@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.7](https://github.com/Joao-victor1416/projeto/compare/v1.3.6...v1.3.7) (2025-05-02)
+
+
+### Bug Fixes
+
+* adicionar tipo de módulo no package.json ([513e07c](https://github.com/Joao-victor1416/projeto/commit/513e07c5a5bdaf1e005c6a3cfb233d762aa87b28))
+
 ### [1.3.6](https://github.com/Joao-victor1416/projeto/compare/v1.3.5...v1.3.6) (2025-05-02)
 
 
