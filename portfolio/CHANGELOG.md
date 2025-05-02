@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Joao-victor1416/projeto/compare/v1.3.8...v1.4.0) (2025-05-02)
+
+
+### Features
+
+* implementar rotas de cadastro e login com validação de dados e geração de token ([3378d1c](https://github.com/Joao-victor1416/projeto/commit/3378d1c7841e67b896eeba3491d6a9a8e01aa978))
+
 ### [1.3.8](https://github.com/Joao-victor1416/projeto/compare/v1.3.7...v1.3.8) (2025-05-02)
 
 
