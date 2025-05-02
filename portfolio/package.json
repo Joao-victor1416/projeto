@@ -6,7 +6,7 @@
   "scripts": {
     "release": "standard-version --follow-tags",
     "start-front": "webpack server --hot",
-    "start-server": "nodemon build/Backend/server.js",
+    "start-server": "nodemon build/Backend/server.bundle.js",
     "build-front": "webpack --config webpack.config.js",
     "build-server": "webpack --config webpack.config.server.js",
     "start": "concurrently \"npm run start-front\" \"npm run start-server\"",
