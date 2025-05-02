@@ -2,6 +2,7 @@
   "name": "projetos",
   "version": "1.3.6",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "release": "standard-version --follow-tags",
