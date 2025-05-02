@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.6](https://github.com/Joao-victor1416/projeto/compare/v1.3.5...v1.3.6) (2025-05-02)
+
+
+### Bug Fixes
+
+* corrigir nome do arquivo de saída para server.bundle.js ([5f1a786](https://github.com/Joao-victor1416/projeto/commit/5f1a786a660830fc638db07194f5fc646fd56103))
+
 ### [1.3.5](https://github.com/Joao-victor1416/projeto/compare/v1.3.4...v1.3.5) (2025-04-30)
 
 ### [1.3.4](https://github.com/Joao-victor1416/projeto/compare/v1.3.3...v1.3.4) (2025-04-30)
