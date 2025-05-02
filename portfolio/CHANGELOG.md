@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Joao-victor1416/projeto/compare/v1.4.1...v1.5.0) (2025-05-02)
+
+
+### Features
+
+* adicionar script para carregar tabela administrativa com validação de token ([228cdeb](https://github.com/Joao-victor1416/projeto/commit/228cdeba7a46b96cafe66bed6cb847971a63a126))
+
 ### [1.4.1](https://github.com/Joao-victor1416/projeto/compare/v1.4.0...v1.4.1) (2025-05-02)
 
 ## [1.4.0](https://github.com/Joao-victor1416/projeto/compare/v1.3.8...v1.4.0) (2025-05-02)
