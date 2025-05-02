@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const crud = require('../controllers/crud');
-const { backLogin } = require('../middlewares/validacaoBack');
+const { backLogin } = require('../middlewares/validacaoCad_Log');
 const gerarToken = require('../utils/gerartoken');
 
 router.post('/', async (req, res) => {
