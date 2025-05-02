@@ -7,7 +7,7 @@ module.exports = {
   target: 'node', // Define o ambiente alvo como Node.js
   externals: [nodeExternals()], // Exclui módulos de node_modules da saída do bundle
   output: {
-    filename: 'Backend/server.js', // Nome do arquivo de saída
+    filename: 'Backend/server.bundle.js', // Nome do arquivo de saída
     path: path.resolve(__dirname, 'build'), // Diretório de saída (build/server.js)
     //clean: true,
   },
