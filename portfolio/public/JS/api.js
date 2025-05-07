@@ -24,6 +24,7 @@ import { validarFormLogin } from "./validation/formLogin.js";
 // Chama a função para registrar o envio dos formulários
 import { registrarEnvioFormularios } from "./events/envioform.js";
 import "./events/tabela.js";
+import "./validation/acesso_rotas.js";
 
 if(document.contains(submit || submitLogin)) {
 document.addEventListener("DOMContentLoaded", () => {
