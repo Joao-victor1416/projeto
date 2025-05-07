@@ -35,7 +35,9 @@ export function registrarEnvioFormularios() {
 
           if (response.data.success && response.data.termos === true) {
             const token = response.data.token;
-            localStorage.setItem("token", token);
+            const termos = response.data.termos;
+            localStorage.setItem("token", token);// 🔐 Salva o token
+            localStorage.setItem("termos", termos);// 🔐 Salva o token
             window.location.href = response.data.redirectUrl;
           }
         } catch (error) {
@@ -58,7 +60,9 @@ export function registrarEnvioFormularios() {
             // Verifica a resposta e redireciona em caso de sucesso
         if (response.data.success && response.data.termos === true) {
           const token = response.data.token;
+          const termos = response.data.termos;
           localStorage.setItem("token", token);// 🔐 Salva o token
+          localStorage.setItem("termos", termos);// 🔐 Salva o token
           window.location.href = response.data.redirectUrl;
         }
       } catch (error) {

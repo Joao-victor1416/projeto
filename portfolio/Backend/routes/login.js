@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const crud = require('../controllers/crud');
+const crud = require('../controllers/usuario');
 const { backLogin } = require('../middlewares/validacaoCad_Log');
 const gerarToken = require('../utils/gerartoken');
 
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
         return res.status(400).json({ error: "Senha incorreta." });
       }
 
-      const token = gerarToken(usuario);
+      const token = await gerarToken(usuario);
       return res.json({
         success: true,
         token,

@@ -23,8 +23,9 @@ import { validarFormLogin } from "./validation/formLogin.js";
 
 // Chama a função para registrar o envio dos formulários
 import { registrarEnvioFormularios } from "./events/envioform.js";
+import "./events/tabela.js";
 
-
+if(document.contains(submit || submitLogin)) {
 document.addEventListener("DOMContentLoaded", () => {
   submit.disabled = true;
   submitLogin.disabled = true;
@@ -55,3 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("body").addEventListener("input", showLoginForm);
 });
 // ===========================
+}

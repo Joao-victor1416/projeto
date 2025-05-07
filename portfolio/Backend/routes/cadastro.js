@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const crud = require('../controllers/crud');
+const crud = require('../controllers/usuario');
 const { backCadastro } = require('../middlewares/validacaoCad_Log');
 const gerarToken = require('../utils/gerartoken');
 
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
       const senhaCriptografada = await bcrypt.hash(senha, 10);
       const novoUsuario = await crud.criarUsuario(nome, sobrenome, email, senhaCriptografada, termos);
 
-      const token = gerarToken(novoUsuario);
+      const token = await gerarToken(novoUsuario);
       return res.json({
         success: true,
         token,
