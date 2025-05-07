@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Joao-victor1416/projeto/compare/v1.5.0...v1.6.0) (2025-05-07)
+
+
+### Features
+
+* refatorar estrutura de código, mover funções para arquivos específicos e implementar autenticação JWT ([757c57e](https://github.com/Joao-victor1416/projeto/commit/757c57e025492ad78e3020a61ca6aa0f99ed5613))
+
 ## [1.5.0](https://github.com/Joao-victor1416/projeto/compare/v1.4.1...v1.5.0) (2025-05-02)
 
 
