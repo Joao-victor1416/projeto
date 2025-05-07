@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/Joao-victor1416/projeto/compare/v1.6.0...v1.7.0) (2025-05-07)
+
+
+### Features
+
+* adicionar validação de acesso em rotas e melhorar estrutura da tabela ([5352ab7](https://github.com/Joao-victor1416/projeto/commit/5352ab74faccda7ebbf3a061828016c617e2e69d))
+
 ## [1.6.0](https://github.com/Joao-victor1416/projeto/compare/v1.5.0...v1.6.0) (2025-05-07)
 
 
