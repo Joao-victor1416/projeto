@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Monta a tabela usando Bootstrap
     let tabelaHTML = `
-      <div class="table-responsive mt-4">
-        <table class="table table-hover table-bordered table-striped">
+      <div class="table-responsive">
+        <table class="table  mt-5 table-hover table-bordered table-striped table-sm" style="z-index: 4;">
           <thead class="table-dark">
             <tr>
               <th>Nome</th>

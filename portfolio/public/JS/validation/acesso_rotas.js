@@ -1,4 +1,3 @@
-if(window.location.href ='http://localhost:9000/public/pages/igreja.html') {
   document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -7,4 +6,3 @@ if(window.location.href ='http://localhost:9000/public/pages/igreja.html') {
     }
     return true;
   });
-}
