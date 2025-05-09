@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/Joao-victor1416/projeto/compare/v1.7.0...v1.7.1) (2025-05-09)
+
+
+### Bug Fixes
+
+* ajustar estilo da tabela e corrigir comportamento de overflow no body ([41458b8](https://github.com/Joao-victor1416/projeto/commit/41458b8d4c756bd72b0b801ba260682dea64769a))
+
 ## [1.7.0](https://github.com/Joao-victor1416/projeto/compare/v1.6.0...v1.7.0) (2025-05-07)
 
 
